@@ -1,0 +1,47 @@
+{
+  "format": "LUNEPH1",
+  "version": 1,
+  "binary_file": "de440s_daily_v1.bin",
+  "header_bytes": 24,
+  "record_bytes": 144,
+  "record_count": 109574,
+  "record_layout": [
+    [
+      "utc_dotnet_ticks",
+      "int64"
+    ],
+    [
+      "et_seconds_past_j2000_tdb",
+      "float64"
+    ],
+    [
+      "earth_heliocentric_state_j2000",
+      "6 float64: km, km/s"
+    ],
+    [
+      "moon_heliocentric_state_j2000",
+      "6 float64: km, km/s"
+    ],
+    [
+      "moon_me_to_j2000_quaternion",
+      "4 float64: x,y,z,w"
+    ]
+  ],
+  "utc_start": "1850-01-01T00:00:00Z",
+  "utc_end": "2150-01-01T00:00:00Z",
+  "sampling": "one UTC day",
+  "position_origin": "Sun center",
+  "inertial_frame": "J2000 (DE440 products use ICRF orientation)",
+  "lunar_body_frame": "MOON_ME alias; current FK maps to MOON_ME_DE440_ME421",
+  "lunar_frame_alignment": "closely aligned to LOLA ME/PA DE421 frame",
+  "spice_toolkit": "CSPICE_N0067",
+  "spiceypy_version": "6.0.0",
+  "kernel_sha256": {
+    "naif0012.tls": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+    "moon_pa_de440_200625.bpc": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+    "moon_de440_250416.tf": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+    "de440s.bsp": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2"
+  },
+  "cache_sha256": "584f9c4f99b9c5843fd2421a3df4c09f6165b13f40d6100da6da4697a95c67ad",
+  "utc_et_note": "Daily UTC-to-ET anchors are exact at sample epochs. Linear conversion between anchors is for visualization; evaluate exact ET through SPICE for precision work near leap-second boundaries."
+}
