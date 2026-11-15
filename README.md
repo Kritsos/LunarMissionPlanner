@@ -79,6 +79,10 @@ Keep new scientific calculations in physical units and double precision, and con
 
 When adding a plot variable, keep the `LunarPlotVariable` enum aligned with `LunarPlotVariableInfo` and `LunarSitePlotHistory.ExtractValues`; also define its units, CSV token, interpolation behavior, and axis range. Adding more than two sites requires generalizing the fixed two-site state in the location controller, presenter, UI, and plot history.
 
-## Model boundaries and validation
+## Model boundaries
 
 The rendered solar-system overview compresses the Sun-Earth distance for visibility while retaining the Earth-Moon separation. Time-dependent values use a daily ephemeris cache and interpolation intended for visualization. Solar visibility samples the apparent solar disc; Earth visibility is a binary terrain line-of-sight result. Power estimates omit effects such as eclipses, panel temperature, wiring, and hardware degradation.
+
+## AI Assistance
+
+OpenAI Codex and ChatGPT assisted with coding, documentation, and troubleshooting of the project.
