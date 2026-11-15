@@ -634,7 +634,6 @@ public sealed class LunarSitePanelsUI : MonoBehaviour
         DrawSectionHeading("SITE INFORMATION AND MEASUREMENTS");
         DrawMetric("LOLA elevation", hasLocation ? FormatMeters(location.elevationMeters) : "--");
         DrawMetric("Radius", hasLocation ? FormatMeters(location.radiusMeters) : "--");
-        DrawMetric("Moon-local XYZ", hasLocation ? FormatMoonPosition(location.moonLocalPosition) : "--");
         DrawMetric("Surface slope", readout.hasSite ? FormatDegrees(readout.surfaceSite.SlopeDegrees) : "--");
         DrawMetric("Horizon build", FormatHorizonStatus(readout, hasLocation));
         if (!string.IsNullOrEmpty(readout.calculationError))
@@ -712,9 +711,6 @@ public sealed class LunarSitePanelsUI : MonoBehaviour
 
     private static string FormatIrradiance(double irradiance)
         => irradiance.ToString("F2", CultureInfo.InvariantCulture) + " W/m2";
-
-    private static string FormatMoonPosition(Vector3 position)
-        => string.Format(CultureInfo.InvariantCulture, "({0:F5}, {1:F5}, {2:F5})", position.x, position.y, position.z);
 
     private static bool TryParseInput(string text, out double value)
     {
